@@ -6,15 +6,15 @@ class Cart{
   }
 
   addItem(i,q){
-    itemList.push(i);
-    itemQuantity.push(q);
+    this.itemList.push(i);
+    this.itemQuantity.push(q);
   }
 
   totalCart(){
     var total = 0;
 
     for(let t=0; t<this.itemList.length; t++);
-      total += (this.itemList[t]*this.itemQuantity[t]);
+      total += (this.itemList[t].price*this.itemQuantity[t]);
   }
     return total;
 
